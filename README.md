@@ -93,6 +93,12 @@ sudo apt-get install sense-hat
 sudo reboot
 ```
 
+Run the apt list --installed command to see all modules installed on the Raspberry Pi.
+
+```
+apt list --installed
+```
+
 ## First Python script
 
 To begin writing our new Python script run the following command in terminal.
