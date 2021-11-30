@@ -77,6 +77,8 @@ ls
 
 Link: https://code.visualstudio.com/docs/remote/ssh
 
+Tutorial link: https://code.visualstudio.com/docs/remote/ssh-tutorial
+
 ## Updating packages on the Raspberry Pi
 
 The sudo apt-get update command is used to download package information from all configured sources.
