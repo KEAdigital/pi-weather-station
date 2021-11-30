@@ -50,18 +50,16 @@ The Raspberry Pi should now be plugged into power and turned on. When it boots u
 
 Next step is to ping the Raspberry Pi to get its IP address and therefore the computer must also be connected to the same local Wi-Fi network as the Raspberry Pi.
 
-Open the Terminal on Mac or Command Prompt on Windows and write “ping raspberrypi.local”
+Open the Terminal on Mac or Command Prompt on Windows and write “ping raspberrypi.local”. For example:
 
 ```
-For example
 ping raspberrypi.local
 64 bytes from 172.20.10.1 ...
 ```
 
-We can now use this IP address to access the Raspberry Pi using SSH so write “ssh pi@ip-address”.
+We can now use this IP address to access the Raspberry Pi using SSH so write “ssh pi@ip-address”. For example:
 
 ```
-For example
 ssh pi@172.20.10.1
 ```
 
