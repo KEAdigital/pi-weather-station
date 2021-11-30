@@ -123,13 +123,13 @@ try:
   while True:
     temp = sense.get_temperature()
     temp = round(temp, 1)
-    print("Temperature C", temp)
+    print("Temperature C: ", temp)
     humidity = sense.get_humidity()
     humidity = round(humidity, 1)
-    print("Humidity :", humidity)
+    print("Humidity: ", humidity)
     pressure = sense.get_pressure()
     pressure = round(pressure, 1)
-    print("Pressure:", pressure)
+    print("Pressure: ", pressure)
     time.sleep(1)
     
 except KeyboardInterrupt:
@@ -145,7 +145,7 @@ sudo python ~/main.py
 The following text should appear in your terminal if everything is working as it should be.
 
 ```
-('Temperature C', 30.0)
-('Humidity :', 39.8)
-('Pressure:', 1025.7)
+Temperature C: 30.0
+Humidity: 39.8
+Pressure: 1025.7
 ```
