@@ -58,6 +58,8 @@ The standard username is “pi” and the standard password is “raspberry”. 
 
 When connected to the Raspberry Pi it is possible to use regular commands to work with its file system.
 
+![image info](./assets/ping-raspberrypi-local-ssh.png)
+
 ## Visual Studio Code Remote Development using SSH
 
 Link: https://code.visualstudio.com/docs/remote/ssh
