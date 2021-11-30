@@ -16,7 +16,7 @@
 
 Download and install Raspberry Pi OS using Raspberry Pi Imager from https://www.raspberrypi.org/software/
 
-Under Operating System, choose Other and Raspberry PiOS Lite (with no desktop environment).
+Under Operating System, choose Other and Raspberry Pi OS Lite (with no desktop environment).
 
 Under Storage, choose the SD card from the KEA Tech Lounge Kit (must be plugged in your PC).
 
