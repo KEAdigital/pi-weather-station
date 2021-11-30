@@ -66,35 +66,36 @@ Link: https://code.visualstudio.com/docs/remote/ssh
 
 The sudo apt-get update command is used to download package information from all configured sources.
 
-'''
+```
 sudo apt-get update
 sudo apt-get upgrade
-'''
+```
 
 Then install SenseHAT package.
 
-'''
+```
 sudo apt-get install sense-hat
 sudo reboot
-'''
+```
 
 ## First Python script
 
 To begin writing our new Python script run the following command in terminal.
 
-'''
+```
 sudo nano ~/main.py
-'''
+```
 
 Add the following code to the Python script using Visual Studio Code Remote Development.
 
-'''
+```
 #!/usr/bin/python
 from sense_hat import SenseHat
 import time
 import sys
 sense = SenseHat()
 sense.clear()
+
 try:
   while True:
     temp = sense.get_temperature()
@@ -107,20 +108,21 @@ try:
     pressure = round(pressure, 1)
     print("Pressure:", pressure)
     time.sleep(1)
+    
 except KeyboardInterrupt:
   pass
-'''
+```
 
 Run the following command in the Terminal to run the script.
 
-'''
+```
 sudo python3 ~/main.py
-'''
+```
 
 The following text should appear in your terminal if everything is working as it should be.
 
-'''
+```
 ('Temperature C', 30.0)
 ('Humidity :', 39.8)
 ('Pressure:', 1025.7)
-'''
+```
