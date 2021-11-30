@@ -139,7 +139,7 @@ except KeyboardInterrupt:
 Run the following command in the Terminal to run the script.
 
 ```
-sudo python3 ~/main.py
+sudo python ~/main.py
 ```
 
 The following text should appear in your terminal if everything is working as it should be.
