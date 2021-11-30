@@ -95,7 +95,7 @@ sudo apt-get install sense-hat
 sudo reboot
 ```
 
-Run the apt list --installed command to see all modules installed on the Raspberry Pi.
+Run the following command to see all modules installed on the Raspberry Pi.
 
 ```
 apt list --installed
