@@ -101,7 +101,7 @@ Run the following command to see all modules installed on the Raspberry Pi.
 apt list --installed
 ```
 
-## First Python script
+## First Python script using the SenseHAT package
 
 To begin writing our new Python script run the following command in terminal.
 
