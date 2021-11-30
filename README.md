@@ -75,9 +75,9 @@ ls
 
 ## Visual Studio Code Remote Development using SSH
 
-Link: https://code.visualstudio.com/docs/remote/ssh
+Documentation: https://code.visualstudio.com/docs/remote/ssh
 
-Tutorial link: https://code.visualstudio.com/docs/remote/ssh-tutorial
+Tutorial: https://code.visualstudio.com/docs/remote/ssh-tutorial
 
 ## Updating packages on the Raspberry Pi
 
