@@ -24,9 +24,9 @@ Select Write to create the Operating System (OS) image for Raspberry Pi on the S
 
 ## Configuration files
 
-The first step is to create a SSH configuration file named "ssh" to enable SSH for remote access to the Raspberry Pi and make a network configuration file named "wpa_supplicant.conf" for the Raspberry Pi to access a local Wi-Fi network.
+The first step is to create a configuration file named "ssh" to enable SSH for remote access to the Raspberry Pi and make a configuration file named "wpa_supplicant.conf" for the Raspberry Pi to access a local Wi-Fi network.
 
-The SSH file should just be empty with no file extension and when the Raspberry Pi is booted (turned on), the operating system will register the SSH file and SSH will be enabled on the Raspberry Pi. 
+The SSH file should just be empty with no file extension and when the Raspberry Pi is booted (turned on), the operating system will register the SSH file and SSH will be enabled on the Raspberry Pi. See the files in the folder "configuration".
 
 The network configuration file for Wi-Fi access enables the Raspberry Pi to connect to a local Wi-Fi network and we recommend using your mobile phone to share its Internet. It is important that there are no spaces in your mobile phone's Wi-Fi name and password.
 
@@ -109,7 +109,7 @@ To begin writing our new Python script run the following command in terminal.
 sudo nano ~/main.py
 ```
 
-Add the following code to the Python script using Visual Studio Code Remote Development.
+Add the following code from the folder "src" to the Python script "main.py" using Visual Studio Code Remote Development.
 
 ```
 #!/usr/bin/python
