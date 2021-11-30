@@ -88,7 +88,7 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-Then install SenseHAT package.
+Then install the SenseHAT package.
 
 ```
 sudo apt-get install sense-hat
