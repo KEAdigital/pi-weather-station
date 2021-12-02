@@ -1,5 +1,7 @@
 # Weather Station with Raspberry Pi and SenseHAT
 
+A new project.
+
 ## Required equipment
 
 - Raspberry Pi 4 Model B
@@ -131,7 +133,7 @@ try:
     pressure = round(pressure, 1)
     print("Pressure: ", pressure)
     time.sleep(1)
-    
+
 except KeyboardInterrupt:
   pass
 ```
