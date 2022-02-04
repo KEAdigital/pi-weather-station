@@ -1,4 +1,4 @@
-# Weather Station with Raspberry Pi and SenseHAT
+# Weather Station with Flask and MariaDB
 
 Remember to install dependencies.
 
