@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Station</title>
+    <style>
+    table {
+    border: 1px solid black;
+    }
+    th, td {
+    border: 1px solid black;
+    padding: 0px 20px;
+    text-align: center;
+    } 
+    </style>
+</head>
+<body>
+    <h1>Weather Station</h1>
+    <ul>
+        <li>
+        <a href="/">Front page</a>
+        </li>
+        <li>
+        <a href="/sensor/1">Sensor id 1</a>
+        </li>
+        <li>
+        <a href="/sensor/2">Sensor id 2</a>
+        </li>
+        <li>
+        <a href="/sensor/3">Sensor id 3</a>
+        </li>
+    </ul>
+    <button>Capture data</button>
+    <table>
+        <tr>
+        <th>#</th>
+        <th>Sensor id</th>
+        <th>Time</th>
+        <th>Value</th>
+        </tr>
+
+        {% for row in rows %}
+        <tr>
+              <td>{{row[0]}}</td>
+              <td>{{row[1]}}</td>
+              <td>{{row[2]}}</td>
+              <td>{{row[3]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
