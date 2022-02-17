@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Station</title>
+    <style>
+    table {
+    border: 1px solid black;
+    }
+    th, td {
+    border: 1px solid black;
+    padding: 0px 20px;
+    text-align: center;
+    } 
+    #myChart {
+        width: 400px;
+        height: 400px;
+    }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+</head>
+<body>
+    <h1>Weather Station</h1>
+    <ul>
+        <li>
+        <a href="/">Front page</a>
+        </li>
+        <li>
+        <a href="/sensor/1">Sensor id 1</a>
+        </li>
+        <li>
+        <a href="/sensor/2">Sensor id 2</a>
+        </li>
+        <li>
+        <a href="/sensor/3">Sensor id 3</a>
+        </li>
+    </ul>
+    <h2>Sensor id {{ sensor_id }}</h2>
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <p></p>
+    <table>
+        <tr>
+        <th>#</th>
+        <th>Sensor id</th>
+        <th>Time</th>
+        <th>Value</th>
+        </tr>
+        {% for row in rows %}
+        <tr>
+              <td>{{row[0]}}</td>
+              <td>{{row[1]}}</td>
+              <td>{{row[2]}}</td>
+              <td>{{row[3]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <h2>Data</h2>
+    <p>{{ rows }}</p>
+
+    <p>{{ rows[0] }}</p>
+    <p>{{ rows[1] }}</p>
+    <p>{{ rows[2] }}</p>
+    <p>{{ rows[3] }}</p>
+
+    <p>{{ labels }}</p>
+    <p>{{ datatitle }}</p>
+    <p>{{ datapoints }}</p>
+
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: {{ labels }},
+                datasets: [{
+                    label: {{ rows[0][1] }},
+                    data: {{ datapoints }},
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                aspectRatio: 4,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+</script>
+</body>
+</html>
