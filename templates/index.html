@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Station</title>
+    <style>
+    table {
+    border: 1px solid black;
+    }
+    th, td {
+    border: 1px solid black;
+    padding: 0px 20px;
+    text-align: center;
+    } 
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+</head>
+<body>
+    <h1>Weather Station</h1>
+    <ul>
+        <li>
+        <a href="/">Front page</a>
+        </li>
+        <li>
+        <a href="/sensor/1">Sensor id 1</a>
+        </li>
+        <li>
+        <a href="/sensor/2">Sensor id 2</a>
+        </li>
+        <li>
+        <a href="/sensor/3">Sensor id 3</a>
+        </li>
+    </ul>
+    <form action="/api/measurements/capture" method="post">
+        <button type="submit">Capture data</button>
+    </form>
+    <p></p>
+    <table>
+        <tr>
+        <th>#</th>
+        <th>Sensor id</th>
+        <th>Time</th>
+        <th>Value</th>
+        </tr>
+
+        {% for row in rows %}
+        <tr>
+              <td>{{row[0]}}</td>
+              <td>{{row[1]}}</td>
+              <td>{{row[2]}}</td>
+              <td>{{row[3]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
